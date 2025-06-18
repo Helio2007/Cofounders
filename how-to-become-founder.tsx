@@ -467,7 +467,7 @@ export default function HowToBecomeFounder() {
       </section>
 
       {/* Pitch Deck Section with Interactive Elements */}
-      <section id="pitch-mastery" className="py-20 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500">
+      <section id="pitch-mastery" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-6 py-3 rounded-full mb-6">
@@ -528,7 +528,7 @@ export default function HowToBecomeFounder() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900">{slide.title}</h4>
-                        <p className="text-gray-700 text-sm">{slide.desc}</p>
+                        <p className="text-gray-600 text-sm">{slide.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -536,32 +536,32 @@ export default function HowToBecomeFounder() {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 text-white rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-6">Presentation Masterclass</h3>
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-200" />
-                    <span>Storytelling techniques that captivate</span>
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 text-white rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold mb-6">Presentation Masterclass</h3>
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
+                      <span>Storytelling techniques that captivate</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
+                      <span>Body language and stage presence</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
+                      <span>Handling tough investor questions</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
+                      <span>Creating memorable moments</span>
+                    </div>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-200" />
-                    <span>Body language and stage presence</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-200" />
-                    <span>Handling tough investor questions</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-200" />
-                    <span>Creating memorable moments</span>
-                  </div>
+                  <Button className="bg-white text-blue-600 hover:bg-gray-100 w-full">
+                    <PlayCircle className="w-4 h-4 mr-2" />
+                    Watch Masterclass
+                  </Button>
                 </div>
-                <Button className="bg-white text-orange-600 hover:bg-gray-100 w-full">
-                  <PlayCircle className="w-4 h-4 mr-2" />
-                  Watch Masterclass
-                </Button>
-              </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white rounded-xl p-6 shadow-lg text-center">
@@ -569,7 +569,7 @@ export default function HowToBecomeFounder() {
                     <Download className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Templates</h4>
-                  <p className="text-gray-700 text-sm mb-3">Professional pitch deck templates</p>
+                  <p className="text-gray-600 text-sm mb-3">Professional pitch deck templates</p>
                   <Button size="sm" variant="outline" className="w-full">
                     Download
                   </Button>
@@ -579,7 +579,7 @@ export default function HowToBecomeFounder() {
                     <Users className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Practice</h4>
-                  <p className="text-gray-700 text-sm mb-3">Monthly pitch practice sessions</p>
+                  <p className="text-gray-600 text-sm mb-3">Monthly pitch practice sessions</p>
                   <Button size="sm" variant="outline" className="w-full">
                     Join Session
                   </Button>
