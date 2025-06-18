@@ -107,19 +107,19 @@ export default function HowToBecomeFounder() {
                 entrepreneurship in Albania's thriving tech ecosystem.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
-                <Badge className="bg-white/20 text-white border-white/30 px-4 py-2 text-sm">
+                <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors">
                   <FileText className="w-4 h-4 mr-2" />
                   Legal Framework
                 </Badge>
-                <Badge className="bg-white/20 text-white border-white/30 px-4 py-2 text-sm">
+                <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors">
                   <TrendingUp className="w-4 h-4 mr-2" />
                   Funding Guide
                 </Badge>
-                <Badge className="bg-white/20 text-white border-white/30 px-4 py-2 text-sm">
+                <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors">
                   <Target className="w-4 h-4 mr-2" />
                   Pitch Mastery
                 </Badge>
-                <Badge className="bg-white/20 text-white border-white/30 px-4 py-2 text-sm">
+                <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors">
                   <PlayCircle className="w-4 h-4 mr-2" />
                   Success Stories
                 </Badge>
@@ -131,8 +131,7 @@ export default function HowToBecomeFounder() {
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg"
+                  className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 px-8 py-4 text-lg font-semibold"
                 >
                   <PlayCircle className="w-5 h-5 mr-2" />
                   Watch Success Stories
@@ -706,7 +705,7 @@ export default function HowToBecomeFounder() {
                   <p className="text-gray-300 text-sm mb-4">{story.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-400">{story.duration} • Interview</span>
-                    <Button size="sm" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                    <Button size="sm" className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 font-semibold">
                       Watch
                     </Button>
                   </div>
@@ -728,7 +727,7 @@ export default function HowToBecomeFounder() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button className="bg-yellow-500 text-gray-900 hover:bg-yellow-400">Apply for Interview</Button>
-                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                <Button className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 font-semibold">
                   View All Stories
                 </Button>
               </div>
@@ -805,8 +804,7 @@ export default function HowToBecomeFounder() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg"
+                className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 px-8 py-4 text-lg font-semibold"
               >
                 <Users className="w-5 h-5 mr-2" />
                 Join Our Community
@@ -839,7 +837,7 @@ export default function HowToBecomeFounder() {
                   className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z" />
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </a>
               </div>
