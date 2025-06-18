@@ -467,122 +467,123 @@ export default function HowToBecomeFounder() {
       </section>
 
       {/* Pitch Deck Section with Interactive Elements */}
-      <section id="pitch-mastery" className="py-20 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500">
+      <section id="pitch-mastery" className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-purple-100 text-purple-800 px-6 py-3 rounded-full mb-6">
-              <Target className="w-5 h-5 mr-2" />
-              <span className="font-semibold">STEP 3: PERFECT YOUR PITCH</span>
+          <div className="rounded-3xl p-12 bg-white">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center bg-purple-100 text-purple-800 px-6 py-3 rounded-full mb-6">
+                <Target className="w-5 h-5 mr-2" />
+                <span className="font-semibold">STEP 3: PERFECT YOUR PITCH</span>
+              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Presentation & Pitch Deck Mastery</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Create compelling presentations that capture investor attention and secure the funding you need.
+              </p>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Presentation & Pitch Deck Mastery</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Create compelling presentations that capture investor attention and secure the funding you need.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-8 shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">The Perfect Pitch Deck</h3>
-                <div className="space-y-4">
-                  {[
-                    {
-                      number: 1,
-                      title: "Problem Statement",
-                      desc: "What pain point are you solving?",
-                      color: "from-red-500 to-pink-500",
-                    },
-                    {
-                      number: 2,
-                      title: "Solution",
-                      desc: "Your unique approach to the problem",
-                      color: "from-blue-500 to-purple-500",
-                    },
-                    {
-                      number: 3,
-                      title: "Market Opportunity",
-                      desc: "Size and potential of your target market",
-                      color: "from-green-500 to-blue-500",
-                    },
-                    {
-                      number: 4,
-                      title: "Business Model",
-                      desc: "How you generate revenue",
-                      color: "from-purple-500 to-pink-500",
-                    },
-                    {
-                      number: 5,
-                      title: "Traction",
-                      desc: "Proof of concept and early success",
-                      color: "from-yellow-500 to-orange-500",
-                    },
-                  ].map((slide, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center p-4 bg-gradient-to-r from-gray-50 to-white rounded-xl border border-gray-100 hover:shadow-md transition-shadow"
-                    >
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <div className="space-y-6">
+                <div className="bg-white rounded-2xl p-8 shadow-xl">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">The Perfect Pitch Deck</h3>
+                  <div className="space-y-4">
+                    {[
+                      {
+                        number: 1,
+                        title: "Problem Statement",
+                        desc: "What pain point are you solving?",
+                        color: "from-red-500 to-pink-500",
+                      },
+                      {
+                        number: 2,
+                        title: "Solution",
+                        desc: "Your unique approach to the problem",
+                        color: "from-blue-500 to-purple-500",
+                      },
+                      {
+                        number: 3,
+                        title: "Market Opportunity",
+                        desc: "Size and potential of your target market",
+                        color: "from-green-500 to-blue-500",
+                      },
+                      {
+                        number: 4,
+                        title: "Business Model",
+                        desc: "How you generate revenue",
+                        color: "from-purple-500 to-pink-500",
+                      },
+                      {
+                        number: 5,
+                        title: "Traction",
+                        desc: "Proof of concept and early success",
+                        color: "from-yellow-500 to-orange-500",
+                      },
+                    ].map((slide, index) => (
                       <div
-                        className={`w-12 h-12 bg-gradient-to-r ${slide.color} rounded-full flex items-center justify-center text-white font-bold mr-4`}
+                        key={index}
+                        className="flex items-center p-4 bg-gradient-to-r from-gray-50 to-white rounded-xl border border-gray-100 hover:shadow-md transition-shadow"
                       >
-                        {slide.number}
+                        <div
+                          className={`w-12 h-12 bg-gradient-to-r ${slide.color} rounded-full flex items-center justify-center text-white font-bold mr-4`}
+                        >
+                          {slide.number}
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{slide.title}</h4>
+                          <p className="text-gray-600 text-sm">{slide.desc}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">{slide.title}</h4>
-                        <p className="text-gray-600 text-sm">{slide.desc}</p>
-                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 text-white rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold mb-6">Presentation Masterclass</h3>
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
+                      <span>Storytelling techniques that captivate</span>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 text-white rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-6">Presentation Masterclass</h3>
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-200" />
-                    <span>Storytelling techniques that captivate</span>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
+                      <span>Body language and stage presence</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
+                      <span>Handling tough investor questions</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
+                      <span>Creating memorable moments</span>
+                    </div>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-200" />
-                    <span>Body language and stage presence</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-200" />
-                    <span>Handling tough investor questions</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-yellow-200" />
-                    <span>Creating memorable moments</span>
-                  </div>
-                </div>
-                <Button className="bg-white text-orange-600 hover:bg-gray-100 w-full">
-                  <PlayCircle className="w-4 h-4 mr-2" />
-                  Watch Masterclass
-                </Button>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Download className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Templates</h4>
-                  <p className="text-gray-600 text-sm mb-3">Professional pitch deck templates</p>
-                  <Button size="sm" variant="outline" className="w-full">
-                    Download
+                  <Button className="bg-white text-blue-600 hover:bg-gray-100 w-full">
+                    <PlayCircle className="w-4 h-4 mr-2" />
+                    Watch Masterclass
                   </Button>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Users className="w-6 h-6 text-white" />
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Download className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Templates</h4>
+                    <p className="text-gray-600 text-sm mb-3">Professional pitch deck templates</p>
+                    <Button size="sm" variant="outline" className="w-full">
+                      Download
+                    </Button>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Practice</h4>
-                  <p className="text-gray-600 text-sm mb-3">Monthly pitch practice sessions</p>
-                  <Button size="sm" variant="outline" className="w-full">
-                    Join Session
-                  </Button>
+                  <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Practice</h4>
+                    <p className="text-gray-600 text-sm mb-3">Monthly pitch practice sessions</p>
+                    <Button size="sm" variant="outline" className="w-full">
+                      Join Session
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
