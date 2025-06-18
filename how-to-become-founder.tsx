@@ -528,7 +528,7 @@ export default function HowToBecomeFounder() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900">{slide.title}</h4>
-                        <p className="text-gray-600 text-sm">{slide.desc}</p>
+                        <p className="text-gray-700 text-sm">{slide.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -569,7 +569,7 @@ export default function HowToBecomeFounder() {
                     <Download className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Templates</h4>
-                  <p className="text-gray-600 text-sm mb-3">Professional pitch deck templates</p>
+                  <p className="text-gray-700 text-sm mb-3">Professional pitch deck templates</p>
                   <Button size="sm" variant="outline" className="w-full">
                     Download
                   </Button>
@@ -579,7 +579,7 @@ export default function HowToBecomeFounder() {
                     <Users className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Practice</h4>
-                  <p className="text-gray-600 text-sm mb-3">Monthly pitch practice sessions</p>
+                  <p className="text-gray-700 text-sm mb-3">Monthly pitch practice sessions</p>
                   <Button size="sm" variant="outline" className="w-full">
                     Join Session
                   </Button>
@@ -591,20 +591,15 @@ export default function HowToBecomeFounder() {
       </section>
 
       {/* Success Stories with Rich Media */}
-      <section id="success-stories" className="py-20 bg-gray-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <img src="/images/startup-event.png" alt="Startup Event" className="w-full h-full object-cover" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-900/90"></div>
-
+      <section id="success-stories" className="py-20 bg-gradient-to-b from-blue-50 via-white to-white text-gray-900 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-blue-700 px-6 py-3 rounded-full mb-6">
               <PlayCircle className="w-5 h-5 mr-2" />
               <span className="font-semibold">SUCCESS STORIES</span>
             </div>
             <h2 className="text-4xl font-bold mb-4">Learn from Our Startup Heroes</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Watch exclusive interviews with founders who transformed their ideas into thriving businesses in Albania's
               tech ecosystem.
             </p>
@@ -615,24 +610,26 @@ export default function HowToBecomeFounder() {
             <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <Badge className="bg-red-600 text-white mb-4">🔴 FEATURED STORY</Badge>
+                  <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm font-semibold mb-4">
+                    FEATURED STORY
+                  </Badge>
                   <h3 className="text-3xl font-bold mb-4">From Dorm Room to €5M Valuation</h3>
-                  <p className="text-gray-300 mb-6 text-lg">
+                  <p className="text-gray-700 mb-6 text-lg">
                     Follow the incredible journey of TechStart Albania as they grew from a university project to
                     securing Series A funding and expanding across the Balkans.
                   </p>
                   <div className="flex items-center space-x-6 mb-6">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-blue-400">€5M</div>
-                      <div className="text-gray-400 text-sm">Valuation</div>
+                      <div className="text-gray-700 text-sm">Valuation</div>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-green-400">50K+</div>
-                      <div className="text-gray-400 text-sm">Users</div>
+                      <div className="text-gray-700 text-sm">Users</div>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-purple-400">3</div>
-                      <div className="text-gray-400 text-sm">Countries</div>
+                      <div className="text-gray-700 text-sm">Countries</div>
                     </div>
                   </div>
                   <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
@@ -695,9 +692,9 @@ export default function HowToBecomeFounder() {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="font-bold text-lg mb-2">{story.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{story.description}</p>
+                  <p className="text-gray-700 text-sm mb-4">{story.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-400">{story.duration} • Interview</span>
+                    <span className="text-xs text-gray-700">{story.duration} • Interview</span>
                     <Button size="sm" className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 font-semibold">
                       Watch
                     </Button>
@@ -714,7 +711,7 @@ export default function HowToBecomeFounder() {
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Share Your Success Story</h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
                 Are you a founder with an inspiring journey? Join our success stories series and help other
                 entrepreneurs learn from your experience.
               </p>
