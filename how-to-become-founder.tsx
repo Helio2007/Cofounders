@@ -107,34 +107,27 @@ export default function HowToBecomeFounder() {
                 entrepreneurship in Albania's thriving tech ecosystem.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
-                <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors">
+                <a href="#legal-framework" className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors rounded-full flex items-center font-semibold">
                   <FileText className="w-4 h-4 mr-2" />
                   Legal Framework
-                </Badge>
-                <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors">
+                </a>
+                <a href="#funding-guide" className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors rounded-full flex items-center font-semibold">
                   <TrendingUp className="w-4 h-4 mr-2" />
                   Funding Guide
-                </Badge>
-                <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors">
+                </a>
+                <a href="#pitch-mastery" className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors rounded-full flex items-center font-semibold">
                   <Target className="w-4 h-4 mr-2" />
                   Pitch Mastery
-                </Badge>
-                <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors">
+                </a>
+                <a href="#success-stories" className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors rounded-full flex items-center font-semibold">
                   <PlayCircle className="w-4 h-4 mr-2" />
                   Success Stories
-                </Badge>
+                </a>
               </div>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex justify-center my-8">
                 <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
                   <Zap className="w-5 h-5 mr-2" />
                   Start Your Journey
-                </Button>
-                <Button
-                  size="lg"
-                  className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 px-8 py-4 text-lg font-semibold"
-                >
-                  <PlayCircle className="w-5 h-5 mr-2" />
-                  Watch Success Stories
                 </Button>
               </div>
             </div>
@@ -190,7 +183,7 @@ export default function HowToBecomeFounder() {
       </section>
 
       {/* Foundation Act Section with Colorful Design */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+      <section id="legal-framework" className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-6 py-3 rounded-full mb-6">
@@ -304,7 +297,7 @@ export default function HowToBecomeFounder() {
       </section>
 
       {/* Grants Section with Visual Elements */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section id="funding-guide" className="py-20 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-600 rounded-full"></div>
           <div className="absolute bottom-20 right-10 w-48 h-48 bg-purple-600 rounded-full"></div>
@@ -474,7 +467,7 @@ export default function HowToBecomeFounder() {
       </section>
 
       {/* Pitch Deck Section with Interactive Elements */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-yellow-50">
+      <section id="pitch-mastery" className="py-20 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-6 py-3 rounded-full mb-6">
@@ -598,7 +591,7 @@ export default function HowToBecomeFounder() {
       </section>
 
       {/* Success Stories with Rich Media */}
-      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+      <section id="success-stories" className="py-20 bg-gray-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img src="/images/startup-event.png" alt="Startup Event" className="w-full h-full object-cover" />
         </div>
