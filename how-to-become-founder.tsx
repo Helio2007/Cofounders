@@ -734,25 +734,13 @@ export default function HowToBecomeFounder() {
             <p className="text-gray-600">Join an ecosystem of innovation supported by top-tier partners</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center opacity-60 hover:opacity-100 transition-opacity">
-            <div className="flex items-center justify-center">
-              <div className="text-2xl font-bold text-blue-600">EDIM</div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="text-2xl font-bold text-orange-600">USAID</div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="text-2xl font-bold text-blue-600">Microsoft</div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="text-2xl font-bold text-blue-600">Cisco</div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="text-2xl font-bold text-red-600">VentureWell</div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="text-2xl font-bold text-red-600">ALBtelecom</div>
-            </div>
+          <div className="flex flex-wrap justify-center items-center gap-12">
+            <img src="/images/aadf.jpg" alt="EDIM" className="h-12 object-contain" />
+            <img src="/images/kastrati.png.jpg" alt="USAID" className="h-12 object-contain" />
+            <img src="/images/usaid.jpg" alt="Microsoft" className="h-12 object-contain" />
+            <img src="/images/microsoft-logo.jpg" alt="Cisco" className="h-12 object-contain" />
+            <img src="/images/cisco.jpg" alt="VentureWell" className="h-12 object-contain" />
+            <img src="/images/albtelecom.jpg" alt="ALBtelecom" className="h-12 object-contain" />
           </div>
         </div>
       </section>
