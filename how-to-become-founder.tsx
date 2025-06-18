@@ -142,9 +142,9 @@ export default function HowToBecomeFounder() {
             <div className="relative">
               <div className="relative z-10">
                 <img
-                  src="/images/protik-hero.png"
+                  src="/images/hero.png"
                   alt="Technology for People"
-                  className="w-full h-auto rounded-2xl shadow-2xl"
+                  className="mx-auto my-8 w-full max-w-md md:max-w-lg h-auto rounded-2xl shadow-2xl object-contain"
                 />
               </div>
               <div className="absolute -top-6 -left-6 w-full h-full bg-gradient-to-br from-yellow-400 to-pink-400 rounded-2xl opacity-20"></div>
