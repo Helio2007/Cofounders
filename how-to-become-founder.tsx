@@ -80,8 +80,8 @@ export default function HowToBecomeFounder() {
 
       {/* Hero Section with Dynamic Background */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800"></div>
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-800 via-purple-800 to-blue-900"></div>
+        <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full opacity-10"></div>
           <div className="absolute top-40 right-32 w-24 h-24 bg-yellow-400 rounded-full opacity-20"></div>
           <div className="absolute bottom-32 left-1/3 w-40 h-40 bg-pink-400 rounded-full opacity-15"></div>
@@ -135,12 +135,13 @@ export default function HowToBecomeFounder() {
             <div className="relative">
               <div className="relative z-10">
                 <img
-                  src="/images/hero.png"
-                  alt="Technology for People"
+                  src="/images/how.jpg"
+                  alt="How to Become a Founder"
                   className="mx-auto my-8 w-full max-w-md md:max-w-lg h-auto rounded-2xl shadow-2xl object-contain"
                 />
               </div>
-              <div className="absolute -top-6 -left-6 w-full h-full bg-gradient-to-br from-yellow-400 to-pink-400 rounded-2xl opacity-20"></div>
+              <div className="absolute -top-2 left-12 w-[75%] h-[85%] bg-gradient-to-br from-yellow-400 to-pink-400 rounded-2xl opacity-25 z-0"></div>
+              <div className="absolute -top-1 left-6 w-[65%] h-[75%] rounded-2xl shadow-xl bg-black/20 blur-sm opacity-20 z-0"></div>
             </div>
           </div>
         </div>
