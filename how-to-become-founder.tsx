@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -15,8 +17,11 @@ import {
   Target,
   Rocket,
 } from "lucide-react"
+import React, { useState } from "react"
 
 export default function HowToBecomeFounder() {
+  const [showModal, setShowModal] = useState(false)
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -125,7 +130,7 @@ export default function HowToBecomeFounder() {
                 </a>
               </div>
               <div className="flex justify-center my-8">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold" onClick={() => setShowModal(true)}>
                   <Zap className="w-5 h-5 mr-2" />
                   Start Your Journey
                 </Button>
@@ -814,6 +819,31 @@ export default function HowToBecomeFounder() {
           </div>
         </div>
       </footer>
+
+      {/* Modal for Registration */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
+            <button onClick={() => setShowModal(false)} className="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl font-bold">&times;</button>
+            <h2 className="text-2xl font-bold mb-4 text-blue-700">Start Your Founder Journey</h2>
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <input type="text" className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Name" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email" className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="you@email.com" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Your Startup Idea</label>
+                <textarea className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Describe your idea..." rows={3}></textarea>
+              </div>
+              <button type="button" className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Submit</button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
