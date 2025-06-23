@@ -22,6 +22,26 @@ import React, { useState } from "react"
 export default function HowToBecomeFounder() {
   const [showModal, setShowModal] = useState(false)
 
+  const handleDownloadDocuments = async () => {
+    try {
+      const response = await fetch('/api/download-legal-documents');
+      if (!response.ok) throw new Error('Download failed');
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Legal_Documents.zip';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error('Error downloading documents:', error);
+      // You might want to show an error message to the user here
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -259,31 +279,63 @@ export default function HowToBecomeFounder() {
 
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4">Quick Start Package</h3>
+                <h3 className="text-2xl font-bold mb-4">Legal Document Package</h3>
                 <p className="mb-6 opacity-90">
-                  Get everything you need to register your startup in one comprehensive package.
+                  Download the official Legal document templates to legally establish your startup.
                 </p>
                 <ul className="space-y-3 mb-6">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                    Legal document templates
+                  <li className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                      <span>Official Foundation Act template</span>
+                    </div>
+                    <Badge className="bg-blue-500/30">Akt Themelimi</Badge>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                    Step-by-step registration guide
+                  <li className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                      <span>Declaration on Ultimate Beneficiaries</span>
+                    </div>
+                    <Badge className="bg-blue-500/30">STATEMENT</Badge>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                    Legal consultation session
+                  <li className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                      <span>Taxation Directorate Registration Form</span>
+                    </div>
+                    <Badge className="bg-blue-500/30">REGISTRATION REQUEST</Badge>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                    Compliance checklist
+                  <li className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                      <span>Rental Agreement</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                      <span>Agreement between Partners</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                      <span>Company Statute</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                      <span>Decision</span>
+                    </div>
                   </li>
                 </ul>
-                <Button className="bg-white text-blue-600 hover:bg-gray-100 w-full">
+                <Button 
+                  className="bg-white text-blue-600 hover:bg-gray-100 w-full"
+                  onClick={handleDownloadDocuments}
+                >
                   <Download className="w-4 h-4 mr-2" />
-                  Download Package
+                  Download Legal Documents Package
                 </Button>
               </div>
 
