@@ -616,7 +616,7 @@ export default function HowToBecomeFounder() {
                     className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold"
                     onClick={() => {
                       const link = document.createElement('a');
-                      link.href = '/Professional-Pitch-Deck-Templates-Designed-for-Startup-Success.pptx';
+                      link.href = '/templates/Professional-Pitch-Deck-Templates-Designed-for-Startup-Success.pptx';
                       link.download = 'Professional-Pitch-Deck-Templates-Designed-for-Startup-Success.pptx';
                       document.body.appendChild(link);
                       link.click();
