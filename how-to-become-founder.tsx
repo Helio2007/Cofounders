@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
 import {
-  PlayCircle,
   FileText,
   Users,
   Lightbulb,
@@ -143,7 +142,6 @@ export default function HowToBecomeFounder() {
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 <a href="#legal-framework" className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors rounded-full flex items-center font-semibold">
-                  <FileText className="w-4 h-4 mr-2" />
                   Legal Framework
                 </a>
                 <a href="#funding-guide" className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors rounded-full flex items-center font-semibold">
@@ -155,7 +153,7 @@ export default function HowToBecomeFounder() {
                   Pitch Mastery
                 </a>
                 <a href="#success-stories" className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm cursor-pointer hover:bg-blue-600 hover:text-white transition-colors rounded-full flex items-center font-semibold">
-                  <PlayCircle className="w-4 h-4 mr-2" />
+                  <FileText className="w-4 h-4 mr-2" />
                   Success Stories
                 </a>
               </div>
@@ -649,7 +647,7 @@ export default function HowToBecomeFounder() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-blue-700 px-6 py-3 rounded-full mb-6">
-              <PlayCircle className="w-5 h-5 mr-2" />
+              <FileText className="w-5 h-5 mr-2" />
               <span className="font-semibold">SUCCESS STORIES</span>
             </div>
             <h2 className="text-4xl font-bold mb-4">Learn from Our Startup Heroes</h2>
@@ -669,34 +667,28 @@ export default function HowToBecomeFounder() {
                   </Badge>
                   <h3 className="text-3xl font-bold mb-4">From Dorm Room to €5M Valuation</h3>
                   <p className="text-gray-700 mb-6 text-lg">
-                    Follow the incredible journey of TechStart Albania as they grew from a university project to
-                    securing Series A funding and expanding across the Balkans.
+                    Follow the inspiring journey of Patoko as it evolved from a local idea into a leading platform, streamlining property rentals across Albania and setting its sights on regional growth.
                   </p>
-                  <div className="flex items-center space-x-6 mb-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-blue-400">€5M</div>
-                      <div className="text-gray-700 text-sm">Valuation</div>
+                                                          <div className="flex items-center justify-center space-x-8 mb-6">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-green-400">20K+</div>
+                        <div className="text-gray-700 text-sm">Users</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-purple-400">1</div>
+                        <div className="text-gray-700 text-sm">Country</div>
+                      </div>
                     </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-400">50K+</div>
-                      <div className="text-gray-700 text-sm">Users</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-400">3</div>
-                      <div className="text-gray-700 text-sm">Countries</div>
-                    </div>
-                  </div>
-                  <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
-                    <PlayCircle className="w-5 h-5 mr-2" />
-                    Watch Full Interview (45 min)
+                    <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-6 text-xl font-semibold w-full">
+                      <FileText className="w-6 h-6 mr-3" />
+                      Read Full Interview
                   </Button>
                 </div>
                 <div className="relative">
                   <div className="aspect-video bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                    <PlayCircle className="w-20 h-20 text-white z-10" />
                     <div className="absolute inset-0 bg-black/20"></div>
                     <img
-                      src="/images/startup-event.png"
+                      src="/images/patoko.png"
                       alt="Startup Interview"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
@@ -708,7 +700,7 @@ export default function HowToBecomeFounder() {
           </div>
 
           {/* More Stories Grid */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid lg:grid-cols-2 gap-8 mb-12 max-w-6xl mx-auto">
             {[
               {
                 title: "GreenTech Revolution",
@@ -724,13 +716,6 @@ export default function HowToBecomeFounder() {
                 category: "E-Commerce",
                 color: "from-purple-500 to-pink-600",
               },
-              {
-                title: "FinTech Disruptor",
-                description: "Digital banking solution serving 100K+ customers",
-                duration: "41 min",
-                category: "FinTech",
-                color: "from-blue-500 to-purple-600",
-              },
             ].map((story, index) => (
               <Card
                 key={index}
@@ -738,9 +723,8 @@ export default function HowToBecomeFounder() {
               >
                 <div className="relative overflow-hidden">
                   <div
-                    className={`aspect-video bg-gradient-to-br ${story.color} flex items-center justify-center relative`}
+                    className={`aspect-[16/9] bg-gradient-to-br ${story.color} flex items-center justify-center relative`}
                   >
-                    <PlayCircle className="w-16 h-16 text-white group-hover:scale-110 transition-transform" />
                     <Badge className="absolute top-3 left-3 bg-black/50 text-white">{story.category}</Badge>
                   </div>
                 </div>
@@ -748,9 +732,9 @@ export default function HowToBecomeFounder() {
                   <h3 className="font-bold text-lg mb-2">{story.title}</h3>
                   <p className="text-gray-700 text-sm mb-4">{story.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-700">{story.duration} • Interview</span>
+                    <span className="text-xs text-gray-700">{story.duration} • Article</span>
                     <Button size="sm" className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 font-semibold">
-                      Watch
+                      Read
                     </Button>
                   </div>
                 </CardContent>
