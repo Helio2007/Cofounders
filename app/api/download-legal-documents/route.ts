@@ -12,8 +12,8 @@ export async function GET() {
       zlib: { level: 9 } // Maximum compression
     });
 
-    // Path to your legal documents folder
-    const docsPath = 'C:/Users/User/OneDrive/Desktop/dokumentat_ligjore';
+    // Path to legal documents folder in public directory
+    const docsPath = join(process.cwd(), 'public', 'legal-documents');
 
     // Add the entire folder to the archive
     archive.directory(docsPath, false);

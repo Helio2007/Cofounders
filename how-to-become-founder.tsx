@@ -614,6 +614,14 @@ export default function HowToBecomeFounder() {
                   <Button 
                     size="lg" 
                     className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/Professional-Pitch-Deck-Templates-Designed-for-Startup-Success.pptx';
+                      link.download = 'Professional-Pitch-Deck-Templates-Designed-for-Startup-Success.pptx';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
                   >
                     <Download className="w-5 h-5 mr-2" />
                     Download Templates
