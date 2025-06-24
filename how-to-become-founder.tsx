@@ -4,6 +4,16 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog"
+import {
   PlayCircle,
   FileText,
   Users,
@@ -21,6 +31,7 @@ import React, { useState } from "react"
 
 export default function HowToBecomeFounder() {
   const [showModal, setShowModal] = useState(false)
+  const [showDownloadAlert, setShowDownloadAlert] = useState(false)
 
   const handleDownloadDocuments = async () => {
     try {
@@ -38,7 +49,6 @@ export default function HowToBecomeFounder() {
       document.body.removeChild(a);
     } catch (error) {
       console.error('Error downloading documents:', error);
-      // You might want to show an error message to the user here
     }
   };
 
@@ -332,7 +342,7 @@ export default function HowToBecomeFounder() {
                 </ul>
                 <Button 
                   className="bg-white text-blue-600 hover:bg-gray-100 w-full"
-                  onClick={handleDownloadDocuments}
+                  onClick={() => setShowDownloadAlert(true)}
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download Legal Documents Package
@@ -896,6 +906,24 @@ export default function HowToBecomeFounder() {
           </div>
         </div>
       )}
+
+      {/* Alert Dialog for Legal Documents Download */}
+      <AlertDialog open={showDownloadAlert} onOpenChange={setShowDownloadAlert}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Legal Document Package Download</AlertDialogTitle>
+            <AlertDialogDescription>
+              Most of the legal documents in this package require legal assistance from a notary.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleDownloadDocuments}>
+              Confirm Download
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   )
 }
