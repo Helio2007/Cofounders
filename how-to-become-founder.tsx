@@ -233,133 +233,132 @@ export default function HowToBecomeFounder() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-blue-100">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
-                    <CheckCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Business Registration Process</h3>
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            {/* Business Registration Process Card */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border border-blue-100">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-start p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
-                    <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
-                      1
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Choose Business Structure</h4>
-                      <p className="text-gray-600 text-sm">
-                        LLC, Joint Stock Company, or Partnership - we'll help you decide
-                      </p>
-                    </div>
+                <h3 className="text-2xl font-bold text-gray-900">Business Registration Process</h3>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-start p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
+                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
+                    1
                   </div>
-                  <div className="flex items-start p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-                    <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Register with QKR</h4>
-                      <p className="text-gray-600 text-sm">National Registration Center - streamlined online process</p>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Choose Business Structure</h4>
+                    <p className="text-gray-600 text-sm">
+                      LLC, Joint Stock Company, or Partnership - we'll help you decide
+                    </p>
                   </div>
-                  <div className="flex items-start p-4 bg-gradient-to-r from-pink-50 to-yellow-50 rounded-lg">
-                    <div className="w-8 h-8 bg-pink-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
-                      3
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Obtain Licenses</h4>
-                      <p className="text-gray-600 text-sm">Industry-specific permits and regulatory approvals</p>
-                    </div>
+                </div>
+                <div className="flex items-start p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
+                  <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
+                    2
                   </div>
-                  <div className="flex items-start p-4 bg-gradient-to-r from-yellow-50 to-green-50 rounded-lg">
-                    <div className="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
-                      4
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Banking Setup</h4>
-                      <p className="text-gray-600 text-sm">
-                        Open business accounts and establish financial infrastructure
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Register with QKR</h4>
+                    <p className="text-gray-600 text-sm">National Registration Center - streamlined online process</p>
+                  </div>
+                </div>
+                <div className="flex items-start p-4 bg-gradient-to-r from-pink-50 to-yellow-50 rounded-lg">
+                  <div className="w-8 h-8 bg-pink-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
+                    3
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Obtain Licenses</h4>
+                    <p className="text-gray-600 text-sm">Industry-specific permits and regulatory approvals</p>
+                  </div>
+                </div>
+                <div className="flex items-start p-4 bg-gradient-to-r from-yellow-50 to-green-50 rounded-lg">
+                  <div className="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
+                    4
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Banking Setup</h4>
+                    <p className="text-gray-600 text-sm">
+                      Open business accounts and establish financial infrastructure
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4">Legal Document Package</h3>
-                <p className="mb-6 opacity-90">
-                  Download the official Legal document templates to legally establish your startup.
-                </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                      <span>Official Foundation Act template</span>
-                    </div>
-                    <Badge className="bg-blue-500/30">Akt Themelimi</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                      <span>Declaration on Ultimate Beneficiaries</span>
-                    </div>
-                    <Badge className="bg-blue-500/30">STATEMENT</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                      <span>Taxation Directorate Registration Form</span>
-                    </div>
-                    <Badge className="bg-blue-500/30">REGISTRATION REQUEST</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                      <span>Rental Agreement</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                      <span>Agreement between Partners</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                      <span>Company Statute</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                      <span>Decision</span>
-                    </div>
-                  </li>
-                </ul>
-                <Button 
-                  className="bg-white text-blue-600 hover:bg-gray-100 w-full"
-                  onClick={() => setShowDownloadAlert(true)}
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Legal Documents Package
-                </Button>
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-l-yellow-500">
-                <div className="flex items-center mb-3">
-                  <Lightbulb className="w-6 h-6 text-yellow-500 mr-2" />
-                  <h4 className="font-semibold text-gray-900">Pro Tip</h4>
-                </div>
-                <p className="text-gray-600 text-sm">
-                  Start the registration process early! It typically takes 5-10 business days, and you'll need this
-                  completed before applying for most grants.
-                </p>
-              </div>
+            {/* Legal Document Package Card */}
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">Legal Document Package</h3>
+              <p className="mb-6 opacity-90">
+                Download the official Legal document templates to legally establish your startup.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span>Official Foundation Act template</span>
+                  </div>
+                  <Badge className="bg-blue-500/30">Akt Themelimi</Badge>
+                </li>
+                <li className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span>Declaration on Ultimate Beneficiaries</span>
+                  </div>
+                  <Badge className="bg-blue-500/30">STATEMENT</Badge>
+                </li>
+                <li className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span>Taxation Directorate Registration Form</span>
+                  </div>
+                  <Badge className="bg-blue-500/30">REGISTRATION REQUEST</Badge>
+                </li>
+                <li className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span>Rental Agreement</span>
+                  </div>
+                </li>
+                <li className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span>Agreement between Partners</span>
+                  </div>
+                </li>
+                <li className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span>Company Statute</span>
+                  </div>
+                </li>
+                <li className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span>Decision</span>
+                  </div>
+                </li>
+              </ul>
+              <Button 
+                className="bg-white text-blue-600 hover:bg-gray-100 w-full"
+                onClick={() => setShowDownloadAlert(true)}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download Legal Documents Package
+              </Button>
             </div>
+          </div>
+
+          {/* Pro Tip Section */}
+          <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-l-yellow-500 max-w-3xl mx-auto">
+            <div className="flex items-center mb-3">
+              <Lightbulb className="w-6 h-6 text-yellow-500 mr-2" />
+              <h4 className="font-semibold text-gray-900">Pro Tip</h4>
+            </div>
+            <p className="text-gray-600 text-sm">
+              Start the registration process early! It typically takes 5-10 business days, and you'll need this
+              completed before applying for most grants.
+            </p>
           </div>
         </div>
       </section>
