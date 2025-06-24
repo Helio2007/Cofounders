@@ -603,52 +603,39 @@ export default function HowToBecomeFounder() {
               </div>
             </div>
 
-              <div className="space-y-6">
-                <div className="bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 text-white rounded-2xl p-8">
-                  <h3 className="text-2xl font-bold mb-6">Presentation Masterclass</h3>
-                  <div className="space-y-4 mb-6">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
-                      <span>Storytelling techniques that captivate</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
-                      <span>Body language and stage presence</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
-                      <span>Handling tough investor questions</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-blue-200" />
-                      <span>Creating memorable moments</span>
-                    </div>
+            <div className="space-y-6">
+              <div className="flex flex-col gap-8 max-w-2xl mx-auto">
+                <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <Download className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
                   </div>
-                  <Button className="bg-white text-blue-600 hover:bg-gray-100 w-full">
-                    <PlayCircle className="w-4 h-4 mr-2" />
-                    Watch Masterclass
+                  <h4 className="text-2xl font-bold text-center mb-3">Templates</h4>
+                  <p className="text-white/80 text-center mb-6">
+                    Professional pitch deck templates designed for startup success
+                  </p>
+                  <Button 
+                    size="lg" 
+                    className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold"
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Templates
                   </Button>
                 </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Download className="w-6 h-6 text-white" />
+                <div className="bg-gradient-to-br from-emerald-600 to-blue-600 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Templates</h4>
-                  <p className="text-gray-600 text-sm mb-3">Professional pitch deck templates</p>
-                  <Button size="sm" variant="outline" className="w-full">
-                    Download
-                  </Button>
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Practice</h4>
-                  <p className="text-gray-600 text-sm mb-3">Monthly pitch practice sessions</p>
-                  <Button size="sm" variant="outline" className="w-full">
-                    Join Session
+                  <h4 className="text-2xl font-bold text-center mb-3">Practice Sessions</h4>
+                  <p className="text-white/80 text-center mb-6">
+                    Join monthly pitch practice sessions with expert feedback
+                  </p>
+                  <Button 
+                    size="lg" 
+                    className="w-full bg-white text-emerald-600 hover:bg-gray-100 font-semibold"
+                  >
+                    <Users className="w-5 h-5 mr-2" />
+                    Join Next Session
                   </Button>
                 </div>
               </div>
