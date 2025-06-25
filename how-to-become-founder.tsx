@@ -27,6 +27,7 @@ import {
   Rocket,
 } from "lucide-react"
 import React, { useState } from "react"
+import { toast } from "@/components/ui/use-toast"
 
 export default function HowToBecomeFounder() {
   const [showModal, setShowModal] = useState(false)
@@ -639,6 +640,7 @@ export default function HowToBecomeFounder() {
                   <Button 
                     size="lg" 
                     className="w-full bg-white text-emerald-600 hover:bg-gray-100 font-semibold"
+                    onClick={() => window.location.href = 'https://protik.org/trainings'}
                   >
                     <Users className="w-5 h-5 mr-2" />
                     Join Next Session
@@ -762,7 +764,14 @@ export default function HowToBecomeFounder() {
                 entrepreneurs learn from your experience.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button className="bg-yellow-500 text-gray-900 hover:bg-yellow-400">Apply for Interview</Button>
+                <Button 
+                  className="bg-yellow-500 text-gray-900 hover:bg-yellow-400" 
+                  onClick={() => {
+                    window.location.href = 'https://protik.org/';
+                  }}
+                >
+                  Apply for Interview
+                </Button>
                 <Button className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 font-semibold">
                   View All Stories
                 </Button>
@@ -822,13 +831,10 @@ export default function HowToBecomeFounder() {
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
-                <Rocket className="w-5 h-5 mr-2" />
-                Start Your Journey
-              </Button>
               <Button
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 px-8 py-4 text-lg font-semibold"
+                onClick={() => window.location.href = 'https://protik.org/for-startups'}
               >
                 <Users className="w-5 h-5 mr-2" />
                 Join Our Community
