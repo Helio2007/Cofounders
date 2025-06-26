@@ -29,6 +29,7 @@ import {
 } from "lucide-react"
 import React, { useState } from "react"
 import { toast } from "@/components/ui/use-toast"
+import Image from "next/image"
 
 export default function HowToBecomeFounder() {
   const [showModal, setShowModal] = useState(false)
@@ -716,45 +717,48 @@ export default function HowToBecomeFounder() {
 
           {/* More Stories Grid */}
           <div className="grid lg:grid-cols-2 gap-8 mb-12 max-w-6xl mx-auto">
-            {[
-              {
-                title: "GreenTech Revolution",
-                description: "Sustainable energy startup that secured €2M EU funding",
-                duration: "38 min",
-                category: "CleanTech",
-                color: "from-green-500 to-blue-600",
-              },
-              {
-                title: "E-Commerce Pioneer",
-                description: "Building the Balkans' largest online marketplace",
-                duration: "52 min",
-                category: "E-Commerce",
-                color: "from-purple-500 to-pink-600",
-              },
-            ].map((story, index) => (
-              <Card
-                key={index}
-                className="bg-white/5 backdrop-blur-sm border-white/10 text-white hover:bg-white/10 transition-all duration-300 group"
-              >
-                <div className="relative overflow-hidden">
-                  <div
-                    className={`aspect-[16/9] bg-gradient-to-br ${story.color} flex items-center justify-center relative`}
-                  >
-                    <Badge className="absolute top-3 left-3 bg-black/50 text-white">{story.category}</Badge>
-                  </div>
+            <div className="group cursor-pointer" onClick={() => window.location.href = '/interview/insectintel'}>
+              <div className="relative">
+                <div className="aspect-[16/9] relative overflow-hidden rounded-lg">
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 mix-blend-multiply z-10"></div>
+                  <Badge className="absolute top-3 left-3 z-20 bg-black/50 text-white px-3 py-1 rounded-full">
+                    CleanTech
+                  </Badge>
+                  <Image
+                    src="/images/insectIntel.webp"
+                    alt="GreenTech Revolution"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-2">{story.title}</h3>
-                  <p className="text-gray-700 text-sm mb-4">{story.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-700">{story.duration} • Article</span>
-                    <Button size="sm" className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 font-semibold">
-                      Read
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+              </div>
+              <div className="mt-4">
+                <h3 className="text-xl font-medium text-gray-900">Intelligent Device Helping Farmers Protect Their Future</h3>
+                <div className="flex items-center justify-between mt-2">
+                  <span className="text-sm text-gray-600">38 min • Article</span>
+                  <span className="text-blue-600 font-medium">Read</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="group cursor-pointer">
+              <div className="relative">
+                <div className="aspect-[16/9] relative overflow-hidden rounded-lg">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600"></div>
+                  <Badge className="absolute top-3 left-3 z-10 bg-black/50 text-white px-3 py-1 rounded-full">
+                    E-Commerce
+                  </Badge>
+                </div>
+              </div>
+              <div className="mt-4">
+                <h3 className="text-xl font-medium text-gray-900">E-Commerce Pioneer</h3>
+                <div className="flex items-center justify-between mt-2">
+                  <span className="text-sm text-gray-600">52 min • Article</span>
+                  <span className="text-blue-600 font-medium">Read</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Call to Action for Interviews */}
@@ -769,15 +773,12 @@ export default function HowToBecomeFounder() {
                 entrepreneurs learn from your experience.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button 
-                  className="bg-yellow-500 text-gray-900 hover:bg-yellow-400"
-                  onClick={() => window.open('https://protik.org/', '_blank')}
-                >
-                  Apply for Interview
-                </Button>
-                <Button className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-800 font-semibold">
-                  View All Stories
-                </Button>
+                                  <Button 
+                    className="bg-yellow-500 text-gray-900 hover:bg-yellow-400"
+                    onClick={() => window.open('https://protik.org/', '_blank')}
+                  >
+                    Apply for Interview
+                  </Button>
               </div>
             </div>
           </div>

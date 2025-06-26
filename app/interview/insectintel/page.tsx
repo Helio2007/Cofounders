@@ -21,7 +21,7 @@ import {
   ChevronRight,
 } from "lucide-react"
 
-export default function InterviewPage() {
+export default function InsectIntelInterviewPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -82,17 +82,17 @@ export default function InterviewPage() {
               Success Stories
             </a>
             <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900">Patoko Interview</span>
+            <span className="text-gray-900">InsectIntel Interview</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 overflow-hidden">
+      <section className="relative py-16 bg-gradient-to-br from-green-600 via-emerald-600 to-blue-600 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full opacity-10"></div>
           <div className="absolute top-40 right-20 w-24 h-24 bg-yellow-400 rounded-full opacity-20"></div>
-          <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-400 rounded-full opacity-15"></div>
+          <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-green-400 rounded-full opacity-15"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
@@ -108,9 +108,9 @@ export default function InterviewPage() {
               </Button>
             </Link>
 
-            <h1 className="text-5xl font-bold mb-6 leading-tight">Patoko, The Everything App</h1>
+            <h1 className="text-5xl font-bold mb-6 leading-tight">InsectIntel: Revolutionizing Agricultural Pest Management</h1>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Follow the inspiring journey of Patoko as it evolved from a local idea into a leading platform, streamlining property rentals across Albania and setting its sights on regional growth.
+              When we think of tech startups, we often think of common apps or devices. But InsectIntel is different. With a clear vision and a team that doesn't back down from challenges, this startup is offering a unique approach to a global problem that concerns farmers in every corner of the world - pest management.
             </p>
 
             <div className="flex flex-wrap justify-center items-center gap-6 text-white/80">
@@ -139,37 +139,28 @@ export default function InterviewPage() {
             <div className="sticky top-24 space-y-8">
               {/* Founder Profile */}
               <Card className="overflow-hidden">
-                <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-6 text-white text-center">
+                <div className="bg-gradient-to-br from-green-600 to-blue-600 p-6 text-white text-center">
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-10 h-10" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Arbri</h3>
-                  <p className="text-white/80 text-sm">CEO & Co-Founder</p>
-                  <p className="text-white/80 text-sm">Patoko</p>
+                  <h3 className="text-xl font-bold mb-2">Endri Dhaskali</h3>
+                  <p className="text-white/80 text-sm">CEO & Founder</p>
+                  <p className="text-white/80 text-sm">InsectIntel</p>
                 </div>
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div>
-                      <div className="text-2xl font-bold text-green-600">20K+</div>
-                      <div className="text-gray-600 text-sm">Active Users</div>
+                      <div className="text-2xl font-bold text-green-600">AI</div>
+                      <div className="text-gray-600 text-sm">Powered Solution</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-purple-600">7</div>
-                      <div className="text-gray-600 text-sm">Cities</div>
+                      <div className="text-2xl font-bold text-blue-600">Global</div>
+                      <div className="text-gray-600 text-sm">Impact Vision</div>
                     </div>
                   </div>
                   <Separator className="my-4" />
-                  <a 
-                    href="https://patoko.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <Button className="w-full" size="sm">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Visit Patoko
-                    </Button>
-                  </a>
+                  <Badge className="bg-green-100 text-green-800 mb-2">CleanTech</Badge>
+                  <Badge className="bg-blue-100 text-blue-800">AgriTech</Badge>
                 </CardContent>
               </Card>
 
@@ -178,32 +169,26 @@ export default function InterviewPage() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold mb-4">In This Interview</h4>
                   <nav className="space-y-2">
-                    <a href="#about" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      About Patoko
-                    </a>
                     <a href="#origin" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
                       Origin Story
                     </a>
-                    <a href="#challenges" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      Biggest Challenges
-                    </a>
-                    <a href="#development" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      Product Development
-                    </a>
-                    <a href="#advice" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      Advice for Founders
-                    </a>
-                    <a href="#success" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                    <a href="#achievements" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
                       Key Achievements
                     </a>
-                    <a href="#current-stage" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      Current Stage & Future Plans
+                    <a href="#future" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                      Future Vision
                     </a>
-                    <a href="#location" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      Current Presence
+                    <a href="#support" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                      Government Support
                     </a>
-                    <a href="#final-advice" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      Final Words of Wisdom
+                    <a href="#partnerships" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                      Key Partnerships
+                    </a>
+                    <a href="#grant" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                      Grant Projects
+                    </a>
+                    <a href="#vision" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                      Future Vision
                     </a>
                   </nav>
                 </CardContent>
@@ -215,44 +200,20 @@ export default function InterviewPage() {
           <div className="lg:col-span-3">
             <article className="prose prose-lg max-w-none">
               {/* Introduction */}
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 mb-12">
-                <Quote className="w-12 h-12 text-blue-600 mb-4" />
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-12">
+                <Quote className="w-12 h-12 text-green-600 mb-4" />
                 <blockquote className="text-2xl font-medium text-gray-900 mb-4 italic">
-                  "Don't fall too much in love with the idea, fall in love with the solution and the consistent way of solving it."
+                  "Our vision is to create a global system that not only helps farmers protect their crops but also contributes to more sustainable agriculture."
                 </blockquote>
-                <cite className="text-gray-600">— Arbri, CEO of Patoko</cite>
+                <cite className="text-gray-600">— Endri Dhaskali, CEO of InsectIntel</cite>
               </div>
 
               <div className="space-y-8">
-                {/* About Section */}
-                <section id="about">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">1</span>
-                    </div>
-                    <h2 className="text-3xl font-bold text-gray-900">About Patoko</h2>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
-                    <p className="text-gray-700 italic">
-                      "Can you briefly tell us what Patoko is and what problem it solves?"
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
-                    <p className="text-blue-800 font-medium mb-2">Arbri:</p>
-                    <p className="text-gray-700">
-                      "Patoko is the first Albanian superapp and the first superapp in Europe, which solves the problem that users have of finding the service they want in the fastest possible way."
-                    </p>
-                  </div>
-                </section>
-
                 {/* Origin Story Section */}
                 <section id="origin">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">2</span>
+                      <span className="text-white font-bold">1</span>
                     </div>
                     <h2 className="text-3xl font-bold text-gray-900">Origin Story</h2>
                   </div>
@@ -260,95 +221,23 @@ export default function InterviewPage() {
                   <div className="bg-gray-50 rounded-xl p-6 mb-6">
                     <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
                     <p className="text-gray-700 italic">
-                      "How did the idea for Patoko come about and what was the moment that convinced you to turn this idea into a real business?"
+                      "Tell us about your startup's background. How did the idea come about and what were the initial steps you took to create this business?"
                     </p>
                   </div>
 
                   <div className="bg-blue-50 rounded-xl p-6 mb-6">
-                    <p className="text-blue-800 font-medium mb-2">Arbri:</p>
+                    <p className="text-blue-800 font-medium mb-2">Endri:</p>
                     <p className="text-gray-700">
-                      "Patoko was born as a brainstorming process between the first co-founder (Patrik) and me, where we wanted to democratize services; we wanted to start with payments, but that is more difficult, so we reached the user's daily life, seeing that countries like Albania have a significant lack of digital services."
+                      "The idea for our startup, InsectIntel, arose from the need to help farmers combat harmful insect invasions before they become a serious problem. By combining advanced AI technology with real-time monitoring, we aimed to create a system that would help protect crops. The initial steps involved developing a simple prototype and testing it in local farms to see the impact of our technology. We then built a small but passionate team to further develop the idea."
                     </p>
                   </div>
                 </section>
 
-                {/* Challenges Section */}
-                <section id="challenges">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">3</span>
-                    </div>
-                    <h2 className="text-3xl font-bold text-gray-900">Biggest Challenges</h2>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
-                    <p className="text-gray-700 italic">
-                      "What have been the biggest challenges during your journey as a startup?"
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
-                    <p className="text-blue-800 font-medium mb-2">Arbri:</p>
-                    <p className="text-gray-700">
-                      "The biggest challenge is how to build a technology company with all the things needed: registration, regulatory part, finding the first customers, improving the product all the time, identifying the type of service, etc. So, when you do a regular startup it is very difficult. When you do a startup that has many, many services it is even more difficult."
-                    </p>
-                  </div>
-                </section>
-
-                {/* Development Section */}
-                <section id="development">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">4</span>
-                    </div>
-                    <h2 className="text-3xl font-bold text-gray-900">Product Development</h2>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
-                    <p className="text-gray-700 italic">
-                      "How long did it take you from developing the idea to the final product?"
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
-                    <p className="text-blue-800 font-medium mb-2">Arbri:</p>
-                    <p className="text-gray-700">
-                      "The final product Patoko is never finished, because it is constantly evolving, but if we take it with MVP (Minimum Viable Product), it took us 3 months to release the first version of the taxi, 6 months for a more curated and functional version, and then it is ongoing all the time, which means; we have done 500 iterations on taxi and in other verticals we are constantly making improvements, taking into account the security aspect, aspects of the general structure, interoperability, integration with other platforms, etc., so it is an ongoing process, but let's take 6 months as the first phase."
-                    </p>
-                  </div>
-                </section>
-
-                {/* Advice Section */}
-                <section id="advice">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">5</span>
-                    </div>
-                    <h2 className="text-3xl font-bold text-gray-900">Advice for Founders</h2>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
-                    <p className="text-gray-700 italic">
-                      "What are some key pieces of advice you would give to someone who wants to become a founder?"
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
-                    <p className="text-blue-800 font-medium mb-2">Arbri:</p>
-                    <p className="text-gray-700">
-                      "It's a cliché, but fail as soon as possible! So, don't fall too much in love with the idea, fall in love with the solution and the consistent way of solving it; if you reach the solution quickly, without any doubt you should jump in, but don't quit without being 100% sure that the idea will work."
-                    </p>
-                  </div>
-                </section>
-
-                {/* Success Section */}
-                <section id="success">
+                {/* Achievements Section */}
+                <section id="achievements">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">6</span>
+                      <span className="text-white font-bold">2</span>
                     </div>
                     <h2 className="text-3xl font-bold text-gray-900">Key Achievements</h2>
                   </div>
@@ -356,86 +245,134 @@ export default function InterviewPage() {
                   <div className="bg-gray-50 rounded-xl p-6 mb-6">
                     <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
                     <p className="text-gray-700 italic">
-                      "What are some of the main successes you have achieved so far?"
+                      "What are the biggest achievements of your startup so far?"
                     </p>
                   </div>
 
                   <div className="bg-blue-50 rounded-xl p-6 mb-6">
-                    <p className="text-blue-800 font-medium mb-2">Arbri:</p>
+                    <p className="text-blue-800 font-medium mb-2">Endri:</p>
                     <p className="text-gray-700">
-                      "The rapid education of the taxi market and the creation of opportunities for other startups, which have seen that a digital product can work, this is the first achievement. Capturing 1000 taxis registered in Patoko, creating other services that did not exist for the reservation part with a very high quality product. We call this a great success! And then changing the perception of the simple taxi in relation to technology. So, taking a 50-60 year old from Tirana, who had not switched to an electric car, because he saw technology as a barrier and then began to understand that in order to survive with other companies, the taxi had to change, is the greatest achievement."
+                      "Our startup has achieved several important successes so far. One of the biggest achievements has been creating functional prototypes that use cameras and advanced algorithms to effectively identify insects. We've also been selected for a government grant, support that has helped us accelerate our technology development phase. Additionally, we've collaborated with farmers and agricultural organizations to test and improve our devices, receiving valuable feedback that has influenced product development. Furthermore, we've presented our vision at international agricultural technology fairs, putting our startup on the global map of innovation in this sector."
                     </p>
                   </div>
                 </section>
 
-                {/* Current Stage Section */}
-                <section id="current-stage">
+                {/* Future Section */}
+                <section id="future">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold">3</span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-900">Future Development</h2>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
+                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
+                    <p className="text-gray-700 italic">
+                      "How do you see your startup developing in the next 3-5 years?"
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
+                    <p className="text-blue-800 font-medium mb-2">Endri:</p>
+                    <p className="text-gray-700">
+                      "In the next 3-5 years, we aim to expand our technology to international markets, with a special focus on European countries. We plan to further improve our devices, adding new features based on collected data analysis and farmer needs. Another priority is creating partnerships with large agricultural companies and research institutions to better integrate our technology into existing agricultural processes. Ultimately, we see ourselves as a key factor in creating a more sustainable and efficient agricultural system that will help farmers face future challenges."
+                    </p>
+                  </div>
+                </section>
+
+                {/* Support Section */}
+                <section id="support">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold">4</span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-900">Government Support</h2>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
+                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
+                    <p className="text-gray-700 italic">
+                      "How do you evaluate the support from government and other institutions for startups in our country?"
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
+                    <p className="text-blue-800 font-medium mb-2">Endri:</p>
+                    <p className="text-gray-700">
+                      "Support from the government has been helpful, especially through grants and innovation promotion programs. However, there is still room for improvement in terms of simplifying bureaucratic procedures and providing support for innovative startups."
+                    </p>
+                  </div>
+                </section>
+
+                {/* Partnerships Section */}
+                <section id="partnerships">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold">5</span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-900">Key Partnerships</h2>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
+                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
+                    <p className="text-gray-700 italic">
+                      "Do you have any partnerships or collaborations that have been key to your startup's development?"
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
+                    <p className="text-blue-800 font-medium mb-2">Endri:</p>
+                    <p className="text-gray-700">
+                      "Yes, collaboration with local farmers has been key to testing and improving our prototype."
+                    </p>
+                  </div>
+                </section>
+
+                {/* Grant Projects Section */}
+                <section id="grant">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold">6</span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-900">Grant Projects</h2>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
+                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
+                    <p className="text-gray-700 italic">
+                      "Recently, you were also one of the startups selected for the government grant. What projects do you plan to implement with this grant?"
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
+                    <p className="text-blue-800 font-medium mb-2">Endri:</p>
+                    <p className="text-gray-700">
+                      "The grant we received from the government will help us implement several important projects. Initially, we plan to complete the development of an advanced model of our device that will be suitable for operating in harsh environmental conditions. Another project is the implementation of a real-time reporting system for farmers, which they can easily use through a dedicated platform. We also plan to expand the device's capacity to identify a wider range of insects and create a rich database that will serve as a valuable source of information for farmers and researchers."
+                    </p>
+                  </div>
+                </section>
+
+                {/* Vision Section */}
+                <section id="vision">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mr-4">
                       <span className="text-white font-bold">7</span>
                     </div>
-                    <h2 className="text-3xl font-bold text-gray-900">Current Stage & Future Plans</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">Future Vision</h2>
                   </div>
 
                   <div className="bg-gray-50 rounded-xl p-6 mb-6">
                     <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
                     <p className="text-gray-700 italic">
-                      "What stage is Patoko in today and what are the short-term plans?"
+                      "What is your vision for the future of your startup and how do you want your startup to be remembered in the industry where you operate?"
                     </p>
                   </div>
 
                   <div className="bg-blue-50 rounded-xl p-6 mb-6">
-                    <p className="text-blue-800 font-medium mb-2">Arbri:</p>
+                    <p className="text-blue-800 font-medium mb-2">Endri:</p>
                     <p className="text-gray-700">
-                      "Our stage is that we are in expansion; either within the team, hiring many people, or in the form of improving the overall product, which is much more advanced than it has ever been and we are in the stage where we are thinking, after this summer is over, of testing in several international markets."
-                    </p>
-                  </div>
-                </section>
-
-                {/* Location Section */}
-                <section id="location">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">8</span>
-                    </div>
-                    <h2 className="text-3xl font-bold text-gray-900">Current Presence</h2>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
-                    <p className="text-gray-700 italic">
-                      "Where is Patoko currently located?"
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
-                    <p className="text-blue-800 font-medium mb-2">Arbri:</p>
-                    <p className="text-gray-700">
-                      "Currently, Patoko has a taxi service in 7 cities and is mostly in Tirana and Durrës with other services."
-                    </p>
-                  </div>
-                </section>
-
-                {/* Final Advice Section */}
-                <section id="final-advice">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">9</span>
-                    </div>
-                    <h2 className="text-3xl font-bold text-gray-900">Final Words of Wisdom</h2>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                    <p className="text-gray-800 font-medium mb-2">Protik Team:</p>
-                    <p className="text-gray-700 italic">
-                      "What would you advise someone who has an idea but doesn't know how to turn it into a business?"
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 rounded-xl p-6 mb-6">
-                    <p className="text-blue-800 font-medium mb-2">Arbri:</p>
-                    <p className="text-gray-700">
-                      "I would tell them to put the idea on the market as soon as possible and see if it works or not. The market will take care of the rest."
+                      "Our vision is to create a global system that not only helps farmers protect their crops but also contributes to more sustainable agriculture. We want InsectIntel to be remembered as the company that transformed how farmers manage invasive insects using intelligent and environmentally friendly technology."
                     </p>
                   </div>
                 </section>
@@ -445,15 +382,14 @@ export default function InterviewPage() {
         </div>
       </div>
 
-
       {/* Call to Action Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-16 rounded-xl text-center mx-6 my-12">
+      <div className="bg-gradient-to-r from-green-600 to-blue-600 p-16 rounded-xl text-center mx-6 my-12">
         <h2 className="text-4xl font-bold text-white mb-4">Want to Share Your Story?</h2>
         <p className="text-white text-lg mb-8 max-w-3xl mx-auto">
           Are you a founder with an inspiring journey? Join our success stories series and help other entrepreneurs learn from your experience.
         </p>
         <Button 
-          className="bg-white text-blue-600 hover:bg-gray-100"
+          className="bg-white text-green-600 hover:bg-gray-100"
           onClick={() => window.open('https://protik.org/', '_blank')}
         >
           Apply for Interview
@@ -502,4 +438,4 @@ export default function InterviewPage() {
       </footer>
     </div>
   )
-}
+} 
