@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -675,7 +676,7 @@ export default function HowToBecomeFounder() {
                   <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm font-semibold mb-4">
                     FEATURED STORY
                   </Badge>
-                  <h3 className="text-3xl font-bold mb-4">From Dorm Room to €5M Valuation</h3>
+                  <h3 className="text-3xl font-bold mb-4">Patoko, The Everything App</h3>
                   <p className="text-gray-700 mb-6 text-lg">
                     Follow the inspiring journey of Patoko as it evolved from a local idea into a leading platform, streamlining property rentals across Albania and setting its sights on regional growth.
                   </p>
@@ -685,14 +686,18 @@ export default function HowToBecomeFounder() {
                         <div className="text-gray-700 text-sm">Users</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-purple-400">1</div>
-                        <div className="text-gray-700 text-sm">Country</div>
+                        <div className="text-2xl font-bold text-purple-400">7</div>
+                        <div className="text-gray-700 text-sm">Citys</div>
                       </div>
                     </div>
-                    <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-6 text-xl font-semibold w-full">
+                    <Button 
+                      size="lg" 
+                      className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-6 text-xl font-semibold w-full"
+                      onClick={() => window.location.href = '/interview'}
+                    >
                       <FileText className="w-6 h-6 mr-3" />
                       Read Full Interview
-                  </Button>
+                    </Button>
                 </div>
                 <div className="relative">
                   <div className="aspect-video bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center relative overflow-hidden">
@@ -765,10 +770,8 @@ export default function HowToBecomeFounder() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button 
-                  className="bg-yellow-500 text-gray-900 hover:bg-yellow-400" 
-                  onClick={() => {
-                    window.location.href = 'https://protik.org/';
-                  }}
+                  className="bg-yellow-500 text-gray-900 hover:bg-yellow-400"
+                  onClick={() => window.open('https://protik.org/', '_blank')}
                 >
                   Apply for Interview
                 </Button>
