@@ -742,19 +742,25 @@ export default function HowToBecomeFounder() {
               </div>
             </div>
 
-            <div className="group cursor-pointer">
+            <div className="group cursor-pointer" onClick={() => window.location.href = '/interview/intrasync'}>
               <div className="relative">
                 <div className="aspect-[16/9] relative overflow-hidden rounded-lg">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600"></div>
-                  <Badge className="absolute top-3 left-3 z-10 bg-black/50 text-white px-3 py-1 rounded-full">
-                    E-Commerce
+                  <Badge className="absolute top-3 left-3 z-20 bg-black/50 text-white px-3 py-1 rounded-full">
+                    IntraSync
                   </Badge>
+                  <Image
+                    src="/images/intrasync-logo-black.png"
+                    alt="IntraSync HR Tech"
+                    fill
+                    className="object-contain bg-white"
+                    priority
+                  />
                 </div>
               </div>
               <div className="mt-4">
-                <h3 className="text-xl font-medium text-gray-900">E-Commerce Pioneer</h3>
+                <h3 className="text-xl font-medium text-gray-900">IntraSync: Modern Employee Management</h3>
                 <div className="flex items-center justify-between mt-2">
-                  <span className="text-sm text-gray-600">52 min • Article</span>
+                  <span className="text-sm text-gray-600">10 min • Article</span>
                   <span className="text-blue-600 font-medium">Read</span>
                 </div>
               </div>
