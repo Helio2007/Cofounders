@@ -27,9 +27,11 @@ import {
   Target,
   Rocket,
 } from "lucide-react"
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { toast } from "@/components/ui/use-toast"
 import Image from "next/image"
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
+import type { UseEmblaCarouselType } from 'embla-carousel-react'
 
 export default function HowToBecomeFounder() {
   const [showModal, setShowModal] = useState(false)
@@ -664,109 +666,118 @@ export default function HowToBecomeFounder() {
             </div>
             <h2 className="text-4xl font-bold mb-4">Learn from Our Startup Heroes</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Watch exclusive interviews with founders who transformed their ideas into thriving businesses in Albania's
-              tech ecosystem.
+              Watch exclusive interviews with founders who transformed their ideas into thriving businesses in Albania's tech ecosystem.
             </p>
           </div>
-
-          {/* Featured Story */}
-          <div className="mb-16">
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-              <div className="grid lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <Badge className="bg-white/80 text-blue-700 border-white/30 px-4 py-2 text-sm font-semibold mb-4">
-                    FEATURED STORY
-                  </Badge>
-                  <h3 className="text-3xl font-bold mb-4">Patoko, The Everything App</h3>
-                  <p className="text-gray-700 mb-6 text-lg">
-                    Follow the inspiring journey of Patoko as it evolved from a local idea into a leading platform, streamlining property rentals across Albania and setting its sights on regional growth.
-                  </p>
-                                                          <div className="flex items-center justify-center space-x-8 mb-6">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-green-400">20K+</div>
-                        <div className="text-gray-700 text-sm">Users</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-purple-400">7</div>
-                        <div className="text-gray-700 text-sm">Citys</div>
-                      </div>
-                    </div>
-                    <Button 
-                      size="lg" 
-                      className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-6 text-xl font-semibold w-full"
-                      onClick={() => window.location.href = '/interview'}
-                    >
-                      <FileText className="w-6 h-6 mr-3" />
-                      Read Full Interview
-                    </Button>
-                </div>
-                <div className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <img
-                      src="/images/patoko.png"
-                      alt="Startup Interview"
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
+          <div className="relative max-w-5xl mx-auto">
+            {/* Carousel with looping and bullet navigation */}
+            {(() => {
+              const slides = [
+                {
+                  badge: <Badge className="bg-blue-100 text-blue-800 mb-4">FEATURED STORY</Badge>,
+                  title: "Patoko, The Everything App",
+                  desc: "Follow the inspiring journey of Patoko as it evolved from a local idea into a leading platform, streamlining property rentals across Albania and setting its sights on regional growth.",
+                  stats: [
+                    { value: "20K+", label: "Users", color: "text-green-400" },
+                    { value: "7", label: "Citys", color: "text-purple-400" },
+                  ],
+                  button: { href: "/interview", text: "Read Full Interview" },
+                  image: { src: "/images/patoko.png", alt: "Startup Interview", className: "object-cover" },
+                  bg: "bg-gradient-to-br from-blue-600 to-purple-600",
+                },
+                {
+                  badge: <Badge className="bg-green-100 text-green-800 mb-4">CleanTech</Badge>,
+                  title: "Intelligent Device Helping Farmers Protect Their Future",
+                  desc: "InsectIntel is revolutionizing agricultural pest management with AI-powered monitoring devices, helping farmers protect their crops and improve sustainability.",
+                  stats: [
+                    { value: "AI", label: "Powered Solution", color: "text-green-400" },
+                    { value: "Global", label: "Impact Vision", color: "text-blue-400" },
+                  ],
+                  button: { href: "/interview/insectintel", text: "Read Full Interview" },
+                  image: { src: "/images/insectIntel.webp", alt: "InsectIntel Interview", className: "object-cover" },
+                  bg: "bg-gradient-to-br from-green-600 to-blue-600",
+                },
+                {
+                  badge: <Badge className="bg-blue-100 text-blue-800 mb-4">IntraSync</Badge>,
+                  title: "IntraSync: Modern Employee Management",
+                  desc: "IntraSync unifies access, scheduling, and coordination for modern teams—making daily work simpler, smarter, and more transparent for SMEs and startups.",
+                  stats: [
+                    { value: "SMEs", label: "Target Market", color: "text-blue-600" },
+                    { value: "Protik", label: "Employee Management", color: "text-purple-600" },
+                  ],
+                  button: { href: "/interview/intrasync", text: "Read Full Interview" },
+                  image: { src: "/images/intrasync-logo-black.png", alt: "IntraSync Interview", className: "object-contain bg-white" },
+                  bg: "bg-gradient-to-br from-blue-600 to-purple-600",
+                },
+              ];
+              const [selectedIndex, setSelectedIndex] = useState(0);
+              const [emblaApi, setEmblaApi] = useState<UseEmblaCarouselType[1] | null>(null);
+              useEffect(() => {
+                if (!emblaApi) return;
+                const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+                emblaApi.on("select", onSelect);
+                onSelect();
+                return () => { if (emblaApi) emblaApi.off("select", onSelect); };
+              }, [emblaApi]);
+              return (
+                <Carousel opts={{ loop: true }} setApi={setEmblaApi}>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                  <CarouselContent>
+                    {slides.map((slide, idx) => (
+                      <CarouselItem key={idx}>
+                        <div className="grid lg:grid-cols-2 gap-8 items-center bg-white/80 rounded-3xl shadow-xl p-8 mb-12">
+                          <div>
+                            {slide.badge}
+                            <h3 className="text-3xl font-bold mb-4">{slide.title}</h3>
+                            <p className="text-gray-700 mb-6 text-lg">{slide.desc}</p>
+                            <div className="flex items-center space-x-8 mb-6">
+                              {slide.stats.map((stat, i) => (
+                                <div className="text-center" key={i}>
+                                  <div className={`text-2xl font-bold ${stat.color}`}>{stat.value}</div>
+                                  <div className="text-gray-700 text-sm">{stat.label}</div>
+                                </div>
+                              ))}
+                            </div>
+                            <Button 
+                              size="lg" 
+                              className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-6 text-xl font-semibold w-full"
+                              onClick={() => window.location.href = slide.button.href}
+                            >
+                              <FileText className="w-6 h-6 mr-3" />
+                              {slide.button.text}
+                            </Button>
+                          </div>
+                          <div className="relative">
+                            <div className={`aspect-video ${slide.bg} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
+                              <div className="absolute inset-0 bg-black/20"></div>
+                              <img
+                                src={slide.image.src}
+                                alt={slide.image.alt}
+                                className={`absolute inset-0 w-full h-full ${slide.image.className}`}
+                              />
+                            </div>
+                            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full opacity-20"></div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  {/* Bullet navigation */}
+                  <div className="flex justify-center mt-4 mb-8 space-x-2">
+                    {slides.map((_, idx) => (
+                      <button
+                        key={idx}
+                        className={`inline-block w-3 h-3 rounded-full transition-colors ${selectedIndex === idx ? 'bg-blue-600' : 'bg-gray-300'}`}
+                        onClick={() => emblaApi && emblaApi.scrollTo(idx)}
+                        aria-label={`Go to slide ${idx + 1}`}
+                      />
+                    ))}
                   </div>
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full opacity-20"></div>
-                </div>
-              </div>
-            </div>
+                </Carousel>
+              );
+            })()}
           </div>
-
-          {/* More Stories Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-12 max-w-6xl mx-auto">
-            <div className="group cursor-pointer" onClick={() => window.location.href = '/interview/insectintel'}>
-              <div className="relative">
-                <div className="aspect-[16/9] relative overflow-hidden rounded-lg">
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 mix-blend-multiply z-10"></div>
-                  <Badge className="absolute top-3 left-3 z-20 bg-black/50 text-white px-3 py-1 rounded-full">
-                    CleanTech
-                  </Badge>
-                  <Image
-                    src="/images/insectIntel.webp"
-                    alt="GreenTech Revolution"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-xl font-medium text-gray-900">Intelligent Device Helping Farmers Protect Their Future</h3>
-                <div className="flex items-center justify-between mt-2">
-                  <span className="text-sm text-gray-600">38 min • Article</span>
-                  <span className="text-blue-600 font-medium">Read</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="group cursor-pointer" onClick={() => window.location.href = '/interview/intrasync'}>
-              <div className="relative">
-                <div className="aspect-[16/9] relative overflow-hidden rounded-lg">
-                  <Badge className="absolute top-3 left-3 z-20 bg-black/50 text-white px-3 py-1 rounded-full">
-                    IntraSync
-                  </Badge>
-                  <Image
-                    src="/images/intrasync-logo-black.png"
-                    alt="IntraSync HR Tech"
-                    fill
-                    className="object-contain bg-white"
-                    priority
-                  />
-                </div>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-xl font-medium text-gray-900">IntraSync: Modern Employee Management</h3>
-                <div className="flex items-center justify-between mt-2">
-                  <span className="text-sm text-gray-600">10 min • Article</span>
-                  <span className="text-blue-600 font-medium">Read</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Call to Action for Interviews */}
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-8 border border-yellow-500/20">
             <div className="text-center">
@@ -779,12 +790,12 @@ export default function HowToBecomeFounder() {
                 entrepreneurs learn from your experience.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                                  <Button 
-                    className="bg-yellow-500 text-gray-900 hover:bg-yellow-400"
-                    onClick={() => window.open('https://protik.org/', '_blank')}
-                  >
-                    Apply for Interview
-                  </Button>
+                <Button 
+                  className="bg-yellow-500 text-gray-900 hover:bg-yellow-400"
+                  onClick={() => window.open('https://protik.org/', '_blank')}
+                >
+                  Apply for Interview
+                </Button>
               </div>
             </div>
           </div>
