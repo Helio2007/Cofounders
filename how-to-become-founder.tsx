@@ -297,7 +297,7 @@ export default function HowToBecomeFounder() {
                 <li className="flex items-center justify-between">
                   <div className="flex items-center">
                     <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                    <span>Official Foundation Act template</span>
+                    <span>Official Foundation Act guide</span>
                   </div>
                   <Badge className="bg-blue-500/30">Akt Themelimi</Badge>
                 </li>
