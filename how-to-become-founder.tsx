@@ -686,7 +686,7 @@ export default function HowToBecomeFounder() {
                   bg: "bg-gradient-to-br from-blue-600 to-purple-600",
                 },
                 {
-                  badge: <Badge className="bg-green-100 text-green-800 mb-4">CleanTech</Badge>,
+                  badge: <Badge className="bg-green-100 text-green-800 mb-4">InsectIntel</Badge>,
                   title: "Intelligent Device Helping Farmers Protect Their Future",
                   desc: "InsectIntel is revolutionizing agricultural pest management with AI-powered monitoring devices, helping farmers protect their crops and improve sustainability.",
                   stats: [
