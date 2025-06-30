@@ -612,24 +612,24 @@ export default function HowToBecomeFounder() {
                   <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Download className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
                   </div>
-                  <h4 className="text-2xl font-bold text-center mb-3">Templates</h4>
+                  <h4 className="text-2xl font-bold text-center mb-3">Guideline</h4>
                   <p className="text-white/80 text-center mb-6">
-                    Professional pitch deck templates designed for startup success
+                    Professional pitch deck guideline designed for startup success
                   </p>
                   <Button 
                     size="lg" 
                     className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold"
                     onClick={() => {
                       const link = document.createElement('a');
-                      link.href = '/templates/Professional-Pitch-Deck-Templates-Designed-for-Startup-Success.pptx';
-                      link.download = 'Professional-Pitch-Deck-Templates-Designed-for-Startup-Success.pptx';
+                      link.href = '/templates/Presentation - Professional Pitch Deck Templates for Investors.pptx';
+                      link.download = 'Presentation - Professional Pitch Deck Templates for Investors.pptx';
                       document.body.appendChild(link);
                       link.click();
                       document.body.removeChild(link);
                     }}
                   >
                     <Download className="w-5 h-5 mr-2" />
-                    Download Templates
+                    Download Guidelines
                   </Button>
                 </div>
 
@@ -907,7 +907,7 @@ export default function HowToBecomeFounder() {
                 <textarea className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Describe your idea..." rows={3}></textarea>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Startup needs</label>
                 <textarea className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your message..." rows={3}></textarea>
               </div>
               <button type="button" className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Submit</button>
