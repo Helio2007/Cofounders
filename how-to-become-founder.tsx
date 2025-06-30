@@ -193,14 +193,14 @@ export default function HowToBecomeFounder() {
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">500+</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">10+</div>
               <div className="text-gray-600">Startups Supported</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">€50M+</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">€100K+</div>
               <div className="text-gray-600">Funding Raised</div>
             </div>
             <div className="text-center">
@@ -253,7 +253,7 @@ export default function HowToBecomeFounder() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Choose Business Structure</h4>
                     <p className="text-gray-600 text-sm">
-                      LLC, Joint Stock Company, or Partnership - we'll help you decide
+                      SHPK, Joint Stock Company, or Partnership - we'll help you decide
                     </p>
                   </div>
                 </div>
@@ -839,11 +839,11 @@ export default function HowToBecomeFounder() {
             </p>
             <div className="flex flex-wrap justify-center gap-6 mb-8">
               <div className="text-center">
-                <div className="text-3xl font-bold">500+</div>
+                <div className="text-3xl font-bold">10+</div>
                 <div className="text-white/80">Startups Launched</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold">€50M+</div>
+                <div className="text-3xl font-bold">€100K+</div>
                 <div className="text-white/80">Funding Raised</div>
               </div>
               <div className="text-center">
@@ -905,6 +905,10 @@ export default function HowToBecomeFounder() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Your Startup Idea</label>
                 <textarea className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Describe your idea..." rows={3}></textarea>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <textarea className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your message..." rows={3}></textarea>
               </div>
               <button type="button" className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Submit</button>
             </form>
